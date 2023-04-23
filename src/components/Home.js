@@ -26,7 +26,7 @@ const Home = () => {
   };
   useEffect(() => {
     handleSubmit(new Event('submit'));
-  }, []);
+  });
 
   return (
     <Box sx={{display:"flex", margin:"40px",flexDirection: ['column', 'row'],justifyContent:"center"}}>
