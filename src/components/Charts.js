@@ -1,6 +1,5 @@
-import React, {useEffect, useState, useRef} from "react";
-import Box from '@mui/material/Box';
-import styles from "./chartStyles.css"
+import React from "react";
+
 
 import {
   LineChart,
@@ -14,10 +13,6 @@ import {
 
 const Charts = (props) => {
     
-      const chartStyle = {
-        width: '90%',
-        maxWidth: '800px',
-      };
   const { data } = props;
   
   return (
