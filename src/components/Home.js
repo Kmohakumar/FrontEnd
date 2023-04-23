@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Charts from "./Charts";
 import { Input } from '@mui/material';
 import { Button } from '@mui/material';
@@ -15,7 +15,8 @@ const Home = () => {
   const [toDate, setToDate] = useState("");
   const [data, setData] = useState([]);
 
-  const handleSubmit = async (event) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleSubmit = useCallback(async (event) => {
     event.preventDefault();
     const response = await fetch(
       `http://3.110.123.118:8000/historical-data/?symbol=${symbol}&from_date=${fromDate}&to_date=${toDate}`
@@ -23,10 +24,10 @@ const Home = () => {
     const json = await response.json();
     setData(json);
     console.log(data)
-  };
+  });
   useEffect(() => {
     handleSubmit(new Event('submit'));
-  },[]);
+  },[handleSubmit]);
 
   return (
     <Box sx={{display:"flex", margin:"40px",flexDirection: ['column', 'row'],justifyContent:"center"}}>
