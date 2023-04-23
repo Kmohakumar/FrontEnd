@@ -1,0 +1,23 @@
+.chartContainer {
+    margin: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .chart-container {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .chart-container {
+      width: 600px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .chart-container {
+      width: 800px;
+    }
+  }
+  
