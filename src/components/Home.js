@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import Charts from "./Charts";
 import { Input } from '@mui/material';
@@ -27,6 +26,7 @@ const Home = () => {
   };
   useEffect(() => {
     handleSubmit(new Event('submit'));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   return (
