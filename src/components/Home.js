@@ -26,7 +26,6 @@ const Home = () => {
   };
   useEffect(() => {
     handleSubmit(new Event('submit'));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   return (
