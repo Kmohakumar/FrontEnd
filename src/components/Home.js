@@ -28,12 +28,12 @@ const Home = () => {
     <Box
       sx={{
         display: "flex",
-        margin: "40px",
+        margin: "80px",
         flexDirection: ["column", "row"],
         justifyContent: "center",
       }}
     >
-      <div>
+      <div >
         <form onSubmit={handleSubmit}>
           <label>
             Symbol:
@@ -66,7 +66,7 @@ const Home = () => {
           </label>
           <br />
           <Button
-            sx={{ backgroundColor: "lightGreen", fontWeight: "bold" }}
+            sx={{ backgroundColor: "lightGreen", fontWeight: "bold", marginBottom: "20px" }}
             type="submit"
           >
             Get Historical Data
