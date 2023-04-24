@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const submitEvent = new Event("submit");
     handleSubmit(submitEvent);
-  }, [handleSubmit]);
+  }, []);
 
   return (
     <Box
