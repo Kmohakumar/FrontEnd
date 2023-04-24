@@ -20,10 +20,10 @@ const Charts = (props) => {
         {data.length > 0 && (
           <LineChart width={800} height={500} data={data}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" tickFormatter={(tick) => new Date(tick).toLocaleDateString()} />
+            <XAxis  tickFormatter={(tick) => new Date(tick).toLocaleDateString()} />
             <YAxis />
             <Tooltip />
-            <Legend />
+            {/* <Legend /> */}
             <Line type="monotone" dataKey="price" stroke="#8884d8" activeDot={{ r: 8 }} />
           </LineChart>
         )}
