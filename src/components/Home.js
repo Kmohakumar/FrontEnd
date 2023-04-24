@@ -8,20 +8,21 @@ const Home = () => {
   const [toDate, setToDate] = useState("");
   const [data, setData] = useState([]);
 
-  const handleSubmit = useCallback(async (event) => {
-    event.preventDefault();
-    const response = await fetch(
-      `https://backend-dq4m.onrender.com/historical-data/?symbol=${symbol}&from_date=${fromDate}&to_date=${toDate}`
-    );
-    const json = await response.json();
-    setData(json);
-  }, [symbol, fromDate, toDate]);
+  const handleSubmit = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const response = await fetch(
+        `https://backend-dq4m.onrender.com/historical-data/?symbol=${symbol}&from_date=${fromDate}&to_date=${toDate}`
+      );
+      const json = await response.json();
+      setData(json);
+    },
+    [symbol, fromDate, toDate]
+  );
 
   useEffect(() => {
-    handleSubmit(new Event('submit'));
+    handleSubmit(new Event("submit"));
   }, []);
-
-
 
   return (
     <Box
