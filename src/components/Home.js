@@ -11,7 +11,7 @@ const Home = () => {
   const handleSubmit = useCallback(async (event) => {
     event.preventDefault();
     const response = await fetch(
-      `http://3.110.123.118:8000/historical-data/?symbol=${symbol}&from_date=${fromDate}&to_date=${toDate}`
+      `https://backend-dq4m.onrender.com/historical-data/?symbol=${symbol}&from_date=${fromDate}&to_date=${toDate}`
     );
     const json = await response.json();
     setData(json);
