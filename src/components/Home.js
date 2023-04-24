@@ -18,9 +18,10 @@ const Home = () => {
   }, [symbol, fromDate, toDate]);
 
   useEffect(() => {
-    const submitEvent = new Event("submit");
-    handleSubmit(submitEvent);
+    handleSubmit(new Event('submit'));
   }, []);
+
+
 
   return (
     <Box
